@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    cursor: none;
+    margin: 0;
+}
+@font-face{
+    font-family: LatoB;
+    src: url('1x/BalooChettan2-Medium.ttf');
+}
+body{
+    background: #ffffff;
+    height: 100vh;
+    overflow: hidden;
+    font-family: latoB;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    animation: blur 3s linear 12s forwards;
+}
+.sh{
+    font-size: 80px;
+    position: absolute;
+    opacity: 0;
+    animation: shows 1s step-start 1s forwards;
+}
+.view{
+    background-color: white;
+    padding: 0px;
+    height: 0;
+    overflow: hidden;
+    font-family: 'LatoB';
+    border-radius: 120px;
+    width: 1000px;
+    display: flex;
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+    animation: hei 1s ease-in-out 7s 1 forwards ;
+}
+.view img{
+    width: 300px;
+    margin: 5px;
+}
+.view h1{
+    color: #1d1d1d;
+    display: inline;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    font-size: 110px;
+    animation: dis 2s ease 8s 1 forwards ;
+}
+h1 .red{
+    color: #b20000;
+}
+.back{
+    position: absolute;
+    width: 250vw;
+    height: 250vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    animation: rot 4s ease-in-out 3s 1 forwards ;
+}
+.p1,.p2{
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+.p1{
+    background-color: #b20000;
+    left: 0;
+    margin-right: 100vw;
+    animation: intro 1s ease-in-out 2s 1 forwards, mar 1s ease-in-out 7s 1 forwards,mar 1s ease-in-out 10s 1 reverse forwards ;
+    border-right: 15px solid #fff;
+}
+.p2{
+    background-color: #1d1d1d;
+    right: 0;
+    animation:mar 1s ease-in-out 7s 1 forwards,mar 1s ease-in-out 10s 1 reverse forwards;
+}
+@keyframes rot{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(270deg);}
+}
+@keyframes mar{
+    from{margin: 0;}
+    to{margin: 130px;}
+}
+@keyframes hei{
+    from{height: 0;padding: 0;}
+    to{height:200px; padding: 20px;}
+}
+@keyframes dis{
+    0%{width: 0;opacity: 0;}
+    60%{width: 666.5px;opacity: 0;}
+    100%{width: 666.5px;opacity: 1;}
+}
+@keyframes intro{
+    from{margin-right: 100vw;}
+    to{margin-right: 0;}
+}
+@keyframes shows{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes blur{
+    from{filter: blur(0);}
+    to{filter: blur(100px);}
+}
